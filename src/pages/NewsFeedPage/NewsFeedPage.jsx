@@ -3,13 +3,11 @@ import { motion } from 'framer-motion';
 import { BottomNav } from '../../components/BottomNav/BottomNav';
 import { SearchBar } from '../../components/SearchBar/SearchBar';
 import { CategoryTab } from '../../components/CategoryTab/CategoryTab';
-import { TrendingCard } from '../../components/TrendingCard/TrendingCard';
 import { NewsCard } from '../../components/NewsCard/NewsCard';
 import { ThemeToggle } from '../../components/ThemeToggle/ThemeToggle';
 import { FandomChip } from '../../components/FandomChip/FandomChip';
 import { Avatar } from '../../components/Avatar/Avatar';
 import { mockNewsArticles } from '../../mock/newsArticles';
-import { mockTrendingItems } from '../../mock/trendingItems';
 import { mockFandoms } from '../../mock/fandoms';
 import { useAuth } from '../../hooks/useAuth';
 import { useFandoms } from '../../hooks/useFandoms';
@@ -66,20 +64,6 @@ export const NewsFeedPage = () => {
       </header>
 
       <main className={`${styles.main} hide-scrollbar`}>
-        <section className={styles.trendingSection}>
-          <h2 className={styles.sectionTitle}>Trending Now</h2>
-          <div className={`${styles.carousel} hide-scrollbar`}>
-            {mockTrendingItems.map((item, idx) => (
-              <TrendingCard key={item.id} item={item} index={idx} />
-            ))}
-          </div>
-          <div className={styles.carouselIndicators}>
-            <div className={`${styles.dot} ${styles.dotActive}`} />
-            <div className={styles.dot} />
-            <div className={styles.dot} />
-          </div>
-        </section>
-
         <section className={styles.feedSection}>
           <h2 className={styles.sectionTitle}>Latest News</h2>
           <div className={styles.feed}>
