@@ -1,0 +1,41 @@
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+  background-color: var(--bg-surface);
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid var(--border);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.chip:hover {
+  background-color: var(--bg-surface-hover);
+  color: var(--text-primary);
+}
+
+.active {
+  border-color: transparent;
+  color: #fff;
+  font-weight: 700;
+}
+
+.coral {
+  background-color: var(--accent-coral);
+}
+.coral:hover { background-color: var(--accent-coral); opacity: 0.9; }
+
+.teal {
+  background-color: var(--accent-teal);
+}
+.teal:hover { background-color: var(--accent-teal); opacity: 0.9; }
+
+.purple {
+  background-color: var(--accent-purple);
+}
+.purple:hover { background-color: var(--accent-purple); opacity: 0.9; }
+

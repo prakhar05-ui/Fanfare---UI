@@ -1,0 +1,107 @@
+.page {
+  padding-bottom: calc(80px + var(--spacing-xl));
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-base);
+  min-height: 100vh;
+}
+
+.progressContainer {
+  position: sticky;
+  top: 0;
+  background-color: var(--bg-base);
+  padding: var(--spacing-md);
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.progressBar {
+  width: 100%;
+  height: 4px;
+  background-color: var(--border);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background-color: var(--accent-gold);
+}
+
+.progressText {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-align: right;
+}
+
+.header {
+  margin-bottom: var(--spacing-lg);
+  padding: 0 var(--spacing-md);
+}
+
+.step {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.title {
+  font-size: 2.2rem;
+  color: var(--text-primary);
+  margin-top: 8px;
+  line-height: 1.1;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  margin-top: var(--spacing-sm);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 0 var(--spacing-md) var(--spacing-lg);
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-width: 430px;
+  margin: 0 auto;
+  padding: var(--spacing-md);
+  background: linear-gradient(to top, var(--bg-base) 60%, transparent);
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+}
+
+.continueBtn {
+  width: 100%;
+  padding: 16px;
+  background-color: var(--accent-gold);
+  color: #0F0E0C;
+  font-family: var(--font-primary);
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-md);
+  opacity: 1;
+  transition: opacity 0.2s;
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+}

@@ -1,0 +1,22 @@
+.toastContainer {
+  position: fixed;
+  bottom: 80px; /* Above bottom nav */
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.toast {
+  background-color: var(--accent-coral);
+  color: #FFFFFF;
+  padding: 12px 24px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.95rem;
+  box-shadow: var(--shadow-lg);
+  pointer-events: auto;
+}
